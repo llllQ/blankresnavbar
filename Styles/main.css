@@ -57,19 +57,15 @@ nav .nav-links .nav-item a {
     position: relative;
   }
   nav .hamburger {
+    z-index: 2;
     position: absolute;
-    cursor: pointer;
     right: 5%;
     top: 50%;
     -webkit-transform: translate(-5%, -50%);
             transform: translate(-5%, -50%);
-    z-index: 2;
   }
-  nav .hamburger .line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 7px;
+  nav .hamburger:focus {
+    outline: none;
   }
   nav .nav-links {
     position: fixed;

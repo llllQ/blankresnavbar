@@ -45,20 +45,30 @@ nav{
     nav{
         position: relative;
         .hamburger{
+            z-index: 2;
             position: absolute;
-            cursor: pointer;
             right: 5%;
             top: 50%;
             transform: translate(-5%, -50%);
-            z-index: 2;
-
-            .line{
-                width: 30px;
-                height: 3px;
-                background: white;
-                margin: 7px;
-            }
         }
+        .hamburger:focus{
+            outline: none;
+        }
+        // .hamburger{
+        //     position: absolute;
+        //     cursor: pointer;
+        //     right: 5%;
+        //     top: 50%;
+        //     transform: translate(-5%, -50%);
+        //     z-index: 2;
+
+        //     .line{
+        //         width: 30px;
+        //         height: 3px;
+        //         background: white;
+        //         margin: 7px;
+        //     }
+        // }
 
         .nav-links{
             position: fixed;
