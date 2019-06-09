@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+nav{
+    height: 9vh;
+    background-color: lightseagreen;
+
+    .nav-links{
+        display: flex;
+        list-style: none;
+        width: 50%;
+        height: 100%;
+        margin-left: auto;
+        justify-content: space-around;
+        align-items: center;
+
+        .nav-item a{
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+}
+
+#landing{
+    height: 91vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: 4em;
+        color: purple;
+    }
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        position: relative;
+        .hamburger{
+            position: absolute;
+            cursor: pointer;
+            right: 5%;
+            top: 50%;
+            transform: translate(-5%, -50%);
+            z-index: 2;
+
+            .line{
+                width: 30px;
+                height: 3px;
+                background: white;
+                margin: 7px;
+            }
+        }
+
+        .nav-links{
+            position: fixed;
+            background: lightseagreen;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            clip-path: circle(0px at 90% -10%);
+            -webkit-clip-path: circle(0px at 90% -10%);
+            transition: all 1s ease-in-out;
+            pointer-events: none;
+        }
+
+        .nav-links.open{
+            clip-path: circle(1200px at 90% -10%);
+            -webkit-clip-path: circle(1200px at 90% -10%);
+            pointer-events: all;
+        }
+
+        .nav-item{
+            opacity: 0;
+        }
+
+        .nav-item a{
+            font-size: 1.5em;
+        }
+
+        .nav-item:nth-child(1){
+            transition: all 0.5s ease 0.3s;
+
+        }
+        .nav-item:nth-child(2){
+            transition: all 0.5s ease 0.5s;
+            
+        }
+        .nav-item:nth-child(3){
+            transition: all 0.5s ease 0.8s;
+            
+        }
+
+        .nav-item.fade{
+            opacity: 1;
+        }
+    }
+}
